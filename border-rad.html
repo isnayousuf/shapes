@@ -7,11 +7,11 @@
     <title>Document</title>
     <style>
         .container{
-            width:  80vw;
+            width:  90vw;
             height: 100vh;
             background-color: rgb(7, 18, 37);
             display:grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             grid-template-rows: auto;
             gap: 10px;
             margin-left: 3rem;
@@ -32,11 +32,11 @@
            border-radius: 14rem 2rem; 
        }
        .box3{
-           width: 150px;
-           height: 150px;
+           width: 180px;
+           height: 90px;
            background-color: coral;
            margin-right: 1rem;
-           border-radius: 6rem; /*top-left, top-right, bottom-right bottom-left*/
+           border-radius: 90px 90px 0 0; /*top-left, top-right, bottom-right bottom-left*/
         }
         .box4{
            width: 150px;
@@ -68,14 +68,7 @@
            border-radius: 40% 0 40% 0;
 
         }
-        .box8{
-            width: 150px;
-           height: 150px;
-           background-color: coral;
-           margin:0 1rem;
-           border-radius: 80% 10% / 40% 10%;
-
-        }
+       
         .box9{
             width: 150px;
            height: 150px;
@@ -96,7 +89,7 @@
             width: 150px;
            height: 150px;
            background-color: coral;
-           margin-right: 1rem;
+           margin:0 1rem;
            border-radius: 70% 0 70% 50%;
 
         }
@@ -108,7 +101,52 @@
            border-radius: 50% 50% ;
         }
     
+       .box13{
+           width: 0px;
+           height: 0px;
+           border-bottom: 120px solid coral;
+           border-right: 100px solid transparent;
+           border-left: 100px solid transparent; 
+       }
+       .box14{
+           width: 0px;
+           height: 0px;
+           background-color: black;
+           border-top: 55px solid red;
+           border-bottom:55px solid blue;
+           border-right: 80px solid green;
+           border-left: 80px solid coral;
+       }
+       .box8{
+           width: 100px;
+           height: 50px;
+           background-color: coral;
+           border-radius: 50px 50px 0 0;
+          position: relative;   
+       }
+       .box8::after{
+           content: '';
+           width: 100px;
+           height: 50px;
+           background-color: coral;
+           border-radius:  0 0 50px 50px;
+           position: absolute;   
+           left: 5rem;
+           top: 3.1rem;
 
+       }
+       .box15{
+            width: 100px;
+           height: 90px;
+           border-bottom: 100px solid coral;
+           border-right: 50px solid transparent;
+           border-left: 50px solid transparent;
+           position: relative;
+           bottom: 5rem;
+           margin:0 1rem;
+          
+
+        }
 
     </style>
 </head>
@@ -126,7 +164,9 @@
    <div class="box10"></div>
    <div class="box11"></div>
    <div class="box12"></div>
-
+   <div class="box13"></div>
+   <div class="box14"></div>
+   <div class="box15"></div>
 </div>
 </body>
 </html>
